@@ -13,9 +13,21 @@ body {
   margin-bottom: 60px;
 }
 
+.signup-title {
+  font-family: 'Rye', cursive;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.login-title {
+  font-family: 'Rye', cursive;
+  margin-bottom: 60px;
+}
+
 .login-btn-block {
   text-align: right;
-  margin: 25px auto;
+  margin: 22px auto;
+  margin-right: 15px;
   /*padding: 4px;*/
 }
 
@@ -40,4 +52,8 @@ body {
 
 .welcome-image {
   width: 78%;
+}
+
+.text-center {
+  text-align: center;
 }
