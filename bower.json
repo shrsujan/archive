@@ -1,0 +1,22 @@
+{
+  "name": "archive-web",
+  "description": "Small description for archive-web goes here",
+  "main": "",
+  "authors": [
+    "Sujan Shrestha <shrsujan2007@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.99.0",
+    "components-font-awesome": "^4.7.0"
+  }
+}

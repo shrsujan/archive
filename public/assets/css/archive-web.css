@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Rye');
+
+* {
+  /*border: 1px solid green;*/
+}
+
+body {
+  background: rgb(223, 237, 249);
+}
+
+.welcome-title {
+  font-family: 'Rye', cursive;
+  margin-bottom: 60px;
+}
+
+.login-btn-block {
+  text-align: right;
+  margin: 25px auto;
+  /*padding: 4px;*/
+}
+
+.login-btn-block a {
+  background: transparent;
+  border: 1px solid #546e7a;
+  box-shadow: none;
+  color: #546e7a;
+}
+
+.login-btn-block a:hover {
+  background: #546e7a;
+  border: 1px solid #546e7a;
+  box-shadow: none;
+  color: rgb(223, 237, 249);
+}
+
+.welcome-text-impt {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.welcome-image {
+  width: 78%;
+}
