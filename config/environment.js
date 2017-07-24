@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'archive-web',
+    modulePrefix: 'archive',
     environment,
     rootURL: '/',
     locationType: 'auto',
