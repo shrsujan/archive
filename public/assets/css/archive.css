@@ -15,8 +15,8 @@ body {
 
 .signup-title {
   font-family: 'Rye', cursive;
-  margin-bottom: 0;
-  margin-left: 15px;
+  margin-bottom: -5px;
+  /*margin-left: 15px;*/
 }
 
 .login-title {
@@ -56,4 +56,9 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.signup-row-field {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
