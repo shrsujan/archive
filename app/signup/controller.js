@@ -7,7 +7,7 @@ export default Ember.Controller.extend(SignUpValidation, {
       this.validate().then(() => {
         
       }).catch((e) => {
-        console.log(e);
+        console.error(e);
       })
     }
   }

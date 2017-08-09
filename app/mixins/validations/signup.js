@@ -4,21 +4,28 @@ import EmberValidations from 'ember-validations';
 export default Ember.Mixin.create(EmberValidations, {
   validations: {
     'model.fullName': {
-      presence: true,
+      presence: {
+        message: 'Enter full name'
+      },
       length: {
         minimum: 5,
         maximum: 100
-      },
-      message: 'hello'
+      }
     },
     'model.email': {
-      presence: true
+      presence: {
+        message: 'Enter email'
+      }
     },
     'model.password': {
-      presence: true
+      presence: {
+        message: 'Enter password'
+      }
     },
     'model.confirmPassword': {
-      presence: true
+      presence: {
+        message: 'Enter confirm password'
+      }
     }
   }
 });
