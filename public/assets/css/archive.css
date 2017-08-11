@@ -66,3 +66,17 @@ body {
 .card-content {
   overflow: hidden;
 }
+
+.validation_error {
+  color: red;
+  font-size: 11px;
+}
+.error-div{
+  margin-top: -16px;
+  width:100%;
+  height:20px;
+}
+
+.hide {
+  display: none;
+}
