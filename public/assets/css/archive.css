@@ -68,7 +68,7 @@ body {
 }
 
 .validation_error {
-  color: red;
+  color: #d81717;
   font-size: 11px;
 }
 .error-div{

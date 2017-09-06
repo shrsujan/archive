@@ -2,7 +2,7 @@ import Ember from 'ember';
 const loggedInUser = {};
 
 export default Ember.Service.extend({
-  isLoggedIn: false,
+  isLoggedIn: true,
   getLoggedInUser() {
     return loggedInUser;
   },

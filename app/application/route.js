@@ -3,36 +3,35 @@ const { get, isEmpty } = Ember;
 
 export default Ember.Route.extend({
   session: Ember.inject.service('session'),
+  isolatedUrls: ['/', '/login', '/signup'],
   
   redirect() {
     let session = get(this, 'session');
     let url = get(this.router, 'url');
     
-    if (url === '/' && session.isLoggedIn) {
+    if (get(this, 'isolatedUrls').indexOf(url) > -1 && session.isLoggedIn) {
       this.replaceWith('dashboard');
     }
   },
   
   actions: {
     error(error, transition) {
+      if (error.status === 401) {
+        // TODO: alert error message
+        // this.transitionTo('login')
+        return false;
+      }
       
       if (isEmpty(error.status)) {
         error.status = 400;
-      }
-      
-      if (error.status === 401) {
-        // this.transitionTo('login')
-      }
-      
-      if (!error.useTransition) {
-        // TODO: handle error
         return false;
-      } else {
-        this.controllerFor('application').set('currentTransition', transition);
-        this.controllerFor('application').set('error', error);
-        return true;
       }
       
+      // This snippet of code sends the error handling portion to application-error.js Route
+      // Error while processing route is seen in console when rendering 404 as it tries to transition to that route
+      this.controllerFor('application').set('currentTransition', transition);
+      this.controllerFor('application').set('error', error);
+      return true;
     }
   }
 });
