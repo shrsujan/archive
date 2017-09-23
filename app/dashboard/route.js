@@ -2,12 +2,9 @@ import Ember from 'ember';
 const { get } = Ember;
 
 export default Ember.Route.extend({
-  session: Ember.inject.service('session'),
-  
   redirect() {
-    let session = get(this, 'session');
-    
-    if (!session.isLoggedIn) {
+    let loggedInUser = get(this, 'session').getLoggedInUser();
+    if (!loggedInUser.isLoggedIn) {
       this.replaceWith('welcome')
     }
   }

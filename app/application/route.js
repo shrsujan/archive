@@ -2,14 +2,14 @@ import Ember from 'ember';
 const { get, isEmpty } = Ember;
 
 export default Ember.Route.extend({
-  session: Ember.inject.service('session'),
-  isolatedUrls: ['/', '/login', '/signup'],
+  publicUrls: ['/', '/login', '/signup'],
   
   redirect() {
-    let session = get(this, 'session');
+    // session is injection in all the routes through the 'initialize-services' initializer
+    let loggedInUser = get(this, 'session').getLoggedInUser();
     let url = get(this.router, 'url');
     
-    if (get(this, 'isolatedUrls').indexOf(url) > -1 && session.isLoggedIn) {
+    if (get(this, 'publicUrls').indexOf(url) > -1 && loggedInUser.isLoggedIn) {
       this.replaceWith('dashboard');
     }
   },

@@ -1,8 +1,9 @@
 import Ember from 'ember';
-const loggedInUser = {};
+const loggedInUser = {
+  isLoggedIn: false
+};
 
 export default Ember.Service.extend({
-  isLoggedIn: true,
   getLoggedInUser() {
     return loggedInUser;
   },
@@ -21,5 +22,4 @@ export default Ember.Service.extend({
   setRefreshToken(token) {
     sessionStorage.setItem('archive_web_refresh_token', token);
   }
-  
 });
